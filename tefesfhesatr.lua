@@ -148,7 +148,7 @@ local Window = Rayfield:CreateWindow({
  
  -- Teleports Tab:
  local Button = TeleportsTab:CreateButton({
-	Name = "Tp To Ares Tank",
+	Name = "Ares Tank",
 	Callback = function()
 	-- The function that takes place when the button is pressed
 	end,
@@ -289,4 +289,77 @@ local Toggle = LocalPlayerTab:CreateToggle({
         -- Rejoin-Funktion
         game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
     end,
+ })
+
+ local Button = OtherTab:CreateButton({
+    Name = "Unload Cheat",
+    Callback = function()
+        -- Rejoin-Funktion
+        Rayfield:Destroy()
+    end,
+ })
+
+ -- Vehicle Tab:
+
+ local Toggle = VehicleTab:CreateToggle({
+	Name = "Vehicle Fly",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	-- The function that takes place when the toggle is pressed
+	-- The variable (Value) is a boolean on whether the toggle is true or false
+	end,
+ })
+
+ local Toggle = VehicleTab:CreateToggle({
+	Name = "Vehicle Velocity",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	-- The function that takes place when the toggle is pressed
+	-- The variable (Value) is a boolean on whether the toggle is true or false
+	end,
+ })
+
+ local Slider = VehicleTab:CreateSlider({
+	Name = "Fly Speed",
+	Range = {0, 300},
+	Increment = 1,
+	Suffix = "Kmh",
+	CurrentValue = 1,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	-- The function that takes place when the slider changes
+	-- The variable (Value) is a number which correlates to the value the slider is currently at
+	end,
+ })
+
+ local Slider = VehicleTab:CreateSlider({
+	Name = "Velocity",
+	Range = {0, 500},
+	Increment = 1,
+	Suffix = "Kmh",
+	CurrentValue = 1,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	-- The function that takes place when the slider changes
+	-- The variable (Value) is a number which correlates to the value the slider is currently at
+	end,
+ })
+
+ local Button = VehicleTab:CreateButton({
+	Name = "Repair Vehicle",
+	Callback = function()
+	-- The function that takes place when the button is pressed
+	end,
+ })
+
+ local Toggle = VehicleTab:CreateToggle({
+	Name = "Rainbow Vehicle",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(Value)
+	-- The function that takes place when the toggle is pressed
+	-- The variable (Value) is a boolean on whether the toggle is true or false
+	end,
  })
