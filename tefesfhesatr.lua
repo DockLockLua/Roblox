@@ -226,12 +226,12 @@ G2L["17"] = Instance.new("UICorner", G2L["16"]);
 
 
 
--- StarterGui.ScreenGui.LocalScript
-G2L["18"] = Instance.new("LocalScript", G2L["1"]);
+-- StarterGui.ScreenGui.Frame.LocalScript
+G2L["18"] = Instance.new("LocalScript", G2L["2"]);
 
 
 
--- StarterGui.ScreenGui.LocalScript
+-- StarterGui.ScreenGui.Frame.LocalScript
 local function C_18()
 local script = G2L["18"];
 	-- Lokalskript im Frame
